@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santino te ama?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="h-screen flex items-center justify-center">
+        <div class="flex flex-col items-center mx-5">
+            <p class="w-full text-center mb-5">Completar el formulario para saber si Santino esta enamorado de usted</p>
+            <div class="flex flex-col">
+                <span>Nombre</span>
+                <input id="name" class="border rounded pl-1" type="text">
+            </div>
+            <div class="flex flex-col">
+                <span>Apellido</span>
+                <input id="last-name" class="border rounded pl-1" type="text">
+            </div>
+
+            <button onclick="results()" class="border rounded px-3 py-1 mt-5">Enviar</button>
+        </div>
+    </section>
+</body>
+
+<script>
+    let name = document.getElementById('name')
+    let lastName = document.getElementById('last-name')
+
+    function results() {
+        if (name.value === '' || lastName.value === '') {
+            alert('El formulario está incompleto')
+        } else if (name.value.toLowerCase() === 'andrea' && lastName.value.toLowerCase() === 'althabe') {
+            alert('Santino está enamorado de vos')
+        } else {
+            alert('Salí de acá rata asquerosa Santino no te ama ni te va a amar nunca')
+        }
+    }
+</script>
+
+</html>
